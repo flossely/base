@@ -38,3 +38,12 @@ if (file_exists('sounds')) {
 } else {
     $sounds = false;
 }
+
+if (file_exists("locale")) {
+    $localeOpen = file_get_contents("locale");
+    $locale = ($localeOpen != "") ? $localeOpen : "en";
+} else {
+    $locale = "en";
+}
+
+$lingua = $locale;
