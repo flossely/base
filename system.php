@@ -33,6 +33,17 @@ $soundlib = str_replace($startDir.'/','',(glob($startDir.'/snd.*.flac')));
 $soundcount = count($soundlib);
 $soundct = $soundcount - 1;
 
+if (file_exists('name')) {
+    $websiteTitleFile = file_get_contents('name');
+    if ($websiteTitleFile != '') {
+        $websiteTitle = $websiteTitleFile;
+    } else {
+        $websiteTitle = 'Base Web System';
+    }
+} else {
+    $websiteTitle = 'Base Web System';
+}
+
 if (file_exists('sounds')) {
     $sounds = boolval(file_get_contents('sounds'));
 } else {
