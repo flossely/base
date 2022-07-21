@@ -38,10 +38,10 @@ if (file_exists('name')) {
     if ($websiteTitleFile != '') {
         $websiteTitle = $websiteTitleFile;
     } else {
-        $websiteTitle = 'Base Web System';
+        $websiteTitle = basename(__DIR__);
     }
 } else {
-    $websiteTitle = 'Base Web System';
+    $websiteTitle = basename(__DIR__);
 }
 
 if (file_exists('sounds')) {
